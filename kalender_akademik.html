@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kalender Akademik - SMKN 1 Sukalarang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      :root {
+        --primary-green: #2e7d32;
+        --footer-dark: #212529;
+      }
+
+      .hero-section {
+        color: #000;
+        padding: 100px 20px 60px;
+        text-align: center;
+        background: none; /* Hapus background */
+      }
+
+      .hero-section h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .btn-download {
+        background-color: var(--primary-green);
+        color: white;
+        transition: all 0.3s ease;
+      }
+
+      .btn-download:hover {
+        background-color: #1b5e20;
+        transform: scale(1.05);
+        color: white;
+      }
+
+      .card-download {
+        max-width: 500px;
+        margin: 0 auto;
+        border: none;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .card-download:hover {
+        transform: translateY(-5px);
+      }
+
+      .footer {
+        background-color: var(--footer-dark);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-success bg-success fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <img src="img/LOGO-BEART.webp" alt="Logo" width="150" class="me-2" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link text-white" href="index.html">BERANDA</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">TENTANG KAMI</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="sambutan.html">Sambutan Kepala Sekolah</a></li>
+                <li><a class="dropdown-item" href="profil_sekolah.html">Profil Sekolah</a></li>
+                <li><a class="dropdown-item" href="jurusan.html">Jurusan</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link text-white" href="berita.html">BERITA</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">INFORMASI</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="pengumuman.html">Pengumuman</a></li>
+                <li><a class="dropdown-item" href="prestasi.html">Prestasi</a></li>
+                <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">SISWA</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="jadwalpelajaran.html">Jadwal Pelajaran</a></li>
+                <li><a class="dropdown-item" href="kalender_akademik.html">Kalender Akademik</a></li>
+                <li><a class="dropdown-item" href="ekstrakurikuler.html">Ekstrakurikuler</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link text-white" href="hubungi_kami.html">HUBUNGI KAMI</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="info_ppdb.html">INFO PPDB</a></li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control form-control-sm me-2" type="search" placeholder="Cari..." aria-label="Search" />
+            <button class="btn btn-outline-light btn-sm" type="submit"><i class="bi bi-search"></i></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Kalender Akademik</h1>
+        <p class="lead mt-3">Unduh kalender akademik tahun ajaran terbaru dan simak jadwal penting kegiatan sekolah.</p>
+      </div>
+    </section>
+
+    <!-- Konten Kalender -->
+    <section class="py-5">
+      <div class="container">
+        <div class="card card-download text-center">
+          <div class="card-body">
+            <i class="bi bi-calendar-event-fill text-success display-4 mb-3"></i>
+            <h5 class="card-title fw-bold">Kalender Akademik 2024/2025</h5>
+            <p class="card-text text-muted">Klik tombol di bawah untuk mengunduh kalender dalam format PDF. Terakhir diperbarui: April 2025</p>
+            <a href="kalender-akademik.pdf" class="btn btn-download btn-lg" download> <i class="bi bi-file-earmark-arrow-down-fill me-2"></i> Unduh Kalender (PDF) </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5 class="fw-bold">Alamat</h5>
+            <p class="mb-1">Jl. Raya Sukabumi - Cianjur KM.12 No.55</p>
+            <p class="mb-1">Cimangkok, Kec. Sukalarang, Kab. Sukabumi</p>
+            <p class="mb-0">Jawa Barat 43191</p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5 class="fw-bold">Kontak</h5>
+            <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i>(0266) 261833</p>
+            <p class="mb-0"><i class="bi bi-envelope-fill me-2"></i>info@smktsukalarang.sch.id</p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5 class="fw-bold">Ikuti Kami</h5>
+            <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-twitter-x fs-4"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+          </div>
+        </div>
+        <hr class="border-light" />
+        <div class="text-center">
+          <p class="mb-0">&copy; 2025 <strong>SMKN 1 Sukalarang</strong>. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

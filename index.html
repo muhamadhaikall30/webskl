@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SMKN 1 Sukalarang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      /* Font default */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+/* Gambar carousel responsif */
+.carousel-img {
+  height: 100vh;
+  max-height: 750px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-img {
+    height: 50vh;
+  }
+}
+
+/* Overlay gelap */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Caption di tengah layar */
+.caption-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Teks responsif */
+.caption-center h1 {
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-success bg-success fixed-top shadow-sm">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold" href="index.html">
+      <img src="img/LOGO-BEART.webp" alt="Logo" width="150" class="me-2" />
+    </a>
+    <!-- Toggle (Mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">BERANDA</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">TENTANG KAMI</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="sambutan.html">Sambutan Kepala Sekolah</a></li>
+            <li><a class="dropdown-item" href="profil_sekolah.html">Profil Sekolah</a></li>
+            <li><a class="dropdown-item" href="jurusan.html">Jurusan</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link text-white" href="berita.html">BERITA</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">INFORMASI</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="pengumuman.html">Pengumuman</a></li>
+            <li><a class="dropdown-item" href="prestasi.html">Prestasi</a></li>
+            <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">SISWA</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="jadwalpelajaran.html">Jadwal Pelajaran</a></li>
+            <li><a class="dropdown-item" href="kalender_akademik.html">Kalender Akademik</a></li>
+            <li><a class="dropdown-item" href="ekstrakurikuler.html">Ekstrakurikuler</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link text-white" href="hubungi_kami.html">HUBUNGI KAMI</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="info_ppdb.html">INFO PPDB</a></li>
+      </ul>
+      <!-- Search Icon -->
+      <form class="d-flex" role="search">
+        <input class="form-control form-control-sm me-2" type="search" placeholder="Cari..." aria-label="Search" />
+        <button class="btn btn-outline-light btn-sm" type="submit"><i class="bi bi-search"></i></button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+    <!-- Carousel -->
+<section id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Dot Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <!-- Carousel Items -->
+  <div class="carousel-inner">
+    
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="position-relative">
+        <img src="img/back.jpg" class="d-block w-100 carousel-img" alt="Foto Sekolah 1" />
+        <div class="overlay"></div>
+        <div class="caption-center text-center text-white px-3">
+          <h1>Selamat Datang di SMKN 1 Sukalarang</h1>
+          <a href="profil_sekolah.html" class="btn btn-success mt-3">Lihat Profil Sekolah</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="position-relative">
+        <img src="img/spmb2025.png" class="d-block w-100 carousel-img" alt="PPDB Banner" />
+        <div class="overlay"></div>
+        <div class="caption-center text-center text-white px-3">
+          <a href="info_ppdb.html" class="btn btn-light mt-3">Lihat Info PPDB</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="position-relative">
+        <img src="img/join.jpg" class="d-block w-100 carousel-img" alt="Pengumuman" />
+        <div class="overlay"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Navigation Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+    <span class="visually-hidden">Sebelumnya</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+    <span class="visually-hidden">Berikutnya</span>
+  </button>
+
+</section>
+
+    <!-- Fitur Utama -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row text-center g-4">
+          <!-- Profil Sekolah -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <div class="mb-3 text-success fs-1">
+                  <i class="bi bi-info-circle-fill"></i>
+                </div>
+                <h5 class="card-title">Profil Sekolah</h5>
+                <p class="card-text small">Penjelasan sekolah secara umum.</p>
+                <a href="profil_sekolah.html" class="text-success fw-semibold text-decoration-none">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jurusan -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <div class="mb-3 text-success fs-1">
+                  <i class="bi bi-gear-fill"></i>
+                </div>
+                <h5 class="card-title">Jurusan</h5>
+                <p class="card-text small">Variasi program keahlian yang tersedia.</p>
+                <a href="jurusan.html" class="text-success fw-semibold text-decoration-none">Lihat Jurusan</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Galeri -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <div class="mb-3 text-success fs-1">
+                  <i class="bi bi-images"></i>
+                </div>
+                <h5 class="card-title">Galeri</h5>
+                <p class="card-text small">Foto-foto kegiatan dan fasilitas.</p>
+                <a href="galeri.html" class="text-success fw-semibold text-decoration-none">Lihat Galeri</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kontak -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <div class="mb-3 text-success fs-1">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <h5 class="card-title">Kontak</h5>
+                <p class="card-text small">Hubungi kami untuk info lebih lanjut.</p>
+                <a href="hubungi_kami.html" class="text-success fw-semibold text-decoration-none">Hubungi Kami</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Carousel with Cards -->
+ <div class="content-wrapper">
+  <h2 class="text-center fw-bold mb-5">Berita Terbaru</h2>
+    <div id="carouselCards" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="img/NGLA.webp" class="card-img-top" alt="Kegiatan 1" />
+                  <div class="card-body">
+                    <p class="card-text">Upacara Bendera</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="img/PPDB.jpg" class="card-img-top" alt="Kegiatan 2" />
+                  <div class="card-body">
+                    <p class="card-text">PPDB & Siswa Baru</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="img/skl.webp" class="card-img-top" alt="Kegiatan 3" />
+                  <div class="card-body">
+                    <p class="card-text">Latihan Paskibra</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="img/workshop.webp" class="card-img-top" alt="Kegiatan 4" />
+                  <div class="card-body">
+                    <p class="card-text">Kegiatan workshop</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="img/izasah.jpeg" class="card-img-top" alt="Kegiatan 5" />
+                  <div class="card-body">
+                    <p class="card-text">Pemberitahuan Pengambilan Ijazah</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="img/mb.webp" class="card-img-top" alt="Kegiatan 6" />
+                  <div class="card-body">
+                    <p class="card-text">Kegiatan Ekstrakurikuler Marching Band</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselCards" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Sebelumnya</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselCards" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Berikutnya</span>
+      </button>
+    </div>
+    <!-- Statistik Sekolah -->
+    <section class="bg-light py-5">
+      <div class="container text-center">
+    <h2 class="mb-4 fw-bold">Tentang Sekolah</h2>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="p-4 bg-white rounded-4 shadow-sm h-100 hover-scale">
+              <i class="bi bi-people-fill fs-1 text-primary mb-2"></i>
+              <h2 class="fw-bold text-dark">1200+</h2>
+              <p class="text-muted">Siswa Aktif</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-4 bg-white rounded-4 shadow-sm h-100 hover-scale">
+              <i class="bi bi-journal-bookmark-fill fs-1 text-success mb-2"></i>
+              <h2 class="fw-bold text-dark">6</h2>
+              <p class="text-muted">Jurusan</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-4 bg-white rounded-4 shadow-sm h-100 hover-scale">
+              <i class="bi bi-person-badge-fill fs-1 text-warning mb-2"></i>
+              <h2 class="fw-bold text-dark">80+</h2>
+              <p class="text-muted">Guru & Staff</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-4 bg-white rounded-4 shadow-sm h-100 hover-scale">
+              <i class="bi bi-trophy-fill fs-1 text-danger mb-2"></i>
+              <h2 class="fw-bold text-dark">30+</h2>
+              <p class="text-muted">Prestasi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ajakan PPDB -->
+    <section class="py-5 bg-success text-white text-center">
+      <div class="container">
+        <h3 class="fw-bold mb-3">Siap Bergabung dengan SMKN 1 Sukalarang?</h3>
+        <p class="mb-4">Klik tombol di bawah untuk melihat informasi PPDB terbaru dan mulailah perjalananmu bersama kami!</p>
+        <a href="info_ppdb.html" class="btn btn-light btn-lg shadow-sm px-4">Info PPDB</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container content-wrapper">
+    <div class="row">
+      <!-- Alamat -->
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Alamat</h5>
+        <p class="mb-1">Jl. Raya Sukabumi - Cianjur KM.12 No.55</p>
+        <p class="mb-1">Cimangkok, Kec. Sukalarang, Kab. Sukabumi</p>
+        <p class="mb-0">Jawa Barat 43191</p>
+      </div>
+      <!-- Kontak -->
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Kontak</h5>
+        <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i>(0266) 261833</p>
+        <p class="mb-0"><i class="bi bi-envelope-fill me-2"></i>info@smktsukalarang.sch.id</p>
+      </div>
+      <!-- Media Sosial -->
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Ikuti Kami</h5>
+        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-twitter-x fs-4"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+      </div>
+    </div>
+    <hr class="border-light" />
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 <strong>SMKN 1 Sukalarang</strong>. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
